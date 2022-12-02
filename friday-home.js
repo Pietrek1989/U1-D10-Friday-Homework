@@ -570,6 +570,18 @@ Write a function called getMovieById which receives an id as a parameter and ret
 */
 
 question(16);
+
+question(16);
+function getMovieById(array, iD) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].imdbID === iD) {
+      let thisMovie = array[i];
+      return console.log(thisMovie);
+    }
+  }
+}
+getMovieById(movies, "tt4154756");
+
 /* EXERCISE 17
 
 Write a function called sumAllTheYears which returns the sum of all the years in which the movies in the provided movies array have been produced.
