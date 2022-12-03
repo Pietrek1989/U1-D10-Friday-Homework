@@ -241,18 +241,16 @@ function dice() {
 question(8);
 
 function rollTheDices(num) {
-  let arr = [];
-  let obj = {
-    sum: 0,
-  };
+  let arr = {};
+  arr.arr = [];
+  arr.sum = 0;
   for (let i = 0; i < num; i++) {
-    arr[i] = dice();
-    obj.sum += arr[i];
+    arr.arr[i] = dice();
+    arr.sum += arr.arr[i];
   }
-  console.log(`The random numbers are: ${arr}`);
-  console.log(`And the sum of them is: ${obj.sum}`);
+  console.log(arr);
 }
-console.log(rollTheDices(3));
+console.log(rollTheDices(10));
 
 /* EXERCISE 9
 
