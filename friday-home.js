@@ -711,8 +711,12 @@ tree(3)
 */
 function tree(aNumOfStars) {
   let star = "*";
-  for (let i = 0; i < aNumOfStars; i++) {
-    console.log(" ".repeat(i), star.repeat(i));
+  for (
+    let i = 0, index = aNumOfStars;
+    i < aNumOfStars && index >= 0;
+    i++, index--
+  ) {
+    console.log(" ".repeat(index) + star.repeat(i + 1) + star.repeat(i));
   }
 }
 tree(10);
